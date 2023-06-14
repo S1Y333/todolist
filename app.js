@@ -152,6 +152,6 @@ app.get("/:customListName", function(req,res){
 })
 
 
-app.listen(processs.env.PORT, function(){
+app.listen(process.env.PORT, function(){
     console.log("Server started on 3000");
 })
