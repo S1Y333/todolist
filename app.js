@@ -128,7 +128,8 @@ app.post("/delete", function(req,res) {
 
 app.get("/:customListName", function(req,res){
     
-    const customListName = _.upperFirst(req.params.customListName);
+    //upperFirst will have two databases for Home and HOME
+    const customListName = _.upperCase(req.params.customListName);
 
      List.findOne({ name: customListName}).then((foundList)=>{
         if (!foundList)
